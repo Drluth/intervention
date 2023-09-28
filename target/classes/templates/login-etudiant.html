@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Page de Login</title>
+	<link rel="stylesheet" type="text/css" href="assets\css\login-etudiant.css">
+	<link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
+	<script src="https://kit.fontawesome.com/a81368914c.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <div class="logo"><center><img src="assets\img\logo_isj.png" alt="" height="50px" ></center></div>
+	<img class="wave" src="assets\img\wave.png">
+	<div class="container">
+		<div class="img">
+			<img src="assets\img\ave-removebg-preview.png">
+		</div>
+		<div class="login-content">
+			<form action="index-etudiant.html">
+				<img src="assets\img\ava.png">
+				<h2 class="title">Bienvenue</h2>
+           		<div class="input-div one">
+           		   <div class="i">
+           		   		<i class="fas fa-user"></i>
+           		   </div>
+           		   <div class="div">
+           		   		<h5>mail/matricule</h5>
+           		   		<input type="text" class="input">
+           		   </div>
+           		</div>
+           		<div class="input-div pass">
+           		   <div class="i"> 
+           		    	<i class="fas fa-lock"></i>
+           		   </div>
+           		   <div class="div">
+           		    	<h5>Mot de passe</h5>
+           		    	<input type="password" class="input">
+            	   </div>
+            	</div>
+            	<a href="#">Mot de passe oublié ?</a>
+            	<input type="submit" class="btn" value="Se connecter">
+            </form>
+        </div>
+    </div>
+    <script type="text/javascript">
+		const inputs = document.querySelectorAll(".input");
+
+
+function addcl(){
+	let parent = this.parentNode.parentNode;
+	parent.classList.add("focus");
+}
+
+function remcl(){
+	let parent = this.parentNode.parentNode;
+	if(this.value == ""){
+		parent.classList.remove("focus");
+	}
+}
+
+
+inputs.forEach(input => {
+	input.addEventListener("focus", addcl);
+	input.addEventListener("blur", remcl);
+});
+
+	</script>
+</body>
+</html>
